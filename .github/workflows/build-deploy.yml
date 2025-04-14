@@ -36,7 +36,7 @@ jobs:
       - name: Publish Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: webapp
+          name: webapp 
           path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
   Deploy:
@@ -45,7 +45,7 @@ jobs:
 
     steps:
       - name: Downlaod artifact from Publish job
-        uses: actions/dowload-artifact@v4
+        uses: actions/download-artifact@v4
         with:
           name: webapp
           path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
