@@ -11,6 +11,6 @@ app.UseSwaggerUI();
 app.UseHttpsRedirection();
 
 // GET UTC
-app.MapGet("time/utc", () => Results.Ok(DateTime.UtcNow));
+app.MapGet("time/utc", () => Results.Ok(DateTime.UtcNow + "hello world"));
 
 await app.RunAsync();
